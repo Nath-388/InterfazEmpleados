@@ -1,21 +1,30 @@
 package ModuloUtillidades;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class GeneradorIDs {
-    private static final String LOWERCASE = "abcdefghijkmnlopqrstuvwxyz";
-    private static final String UPPERCASE= "ABCDEFGHIJKMNLOPQRSTUVWXYZ";
-    private static final String DIGITS = "0123456789";
+     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private static final int ID_LENGTH = 8;
+    private static final Random random = new Random();
+    private static Set<String> generatedIds = new HashSet<>();
 
-    public static String generateID(int length) {
-        String characters= LOWERCASE + UPPERCASE + DIGITS;
-        char[] id = new char[length];
-        int pos;
-        Random r= new Random();
-        for (int i = 0; i < length; i++) {
-            pos= r.nextInt(characters.length());
-            id[i] = characters.charAt((pos));
-        }
-        return new String(id);
+    public static String generateUniqueId() {
+        String id;
+        do {
+            StringBuilder sb = new StringBuilder(ID_LENGTH);
+            for (int i = 0; i < ID_LENGTH; i++) {
+                sb.append(CHARACTERS.charAt(random.nextInt(CHARACTERS.length())));
+            }
+            id = sb.toString();
+        } while (generatedIds.contains(id));
+        
+        generatedIds.add(id);
+        return id;
+    }
+    
+    public static void addExistingId(String id) {
+        generatedIds.add(id);
     }
 }

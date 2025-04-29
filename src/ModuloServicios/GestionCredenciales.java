@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ModuloServicios;
 
 import ModuloEstructuras.ListaEnlazada;
@@ -5,16 +9,7 @@ import ModuloEstructuras.NodoLista;
 import ModuloModelos.Empleado;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
 import com.google.gson.reflect.TypeToken;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -24,13 +19,13 @@ import java.io.Writer;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-public class GestionEmpleados {
-    private ListaEnlazada<Empleado> empleados;
-    private final String archivo = "empleados.json";
+public class GestionCredenciales {
+     private ListaEnlazada<Empleado> empleados;
+    private final String archivo = "credenciales.json";
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     
-    public GestionEmpleados() throws IOException {
-    this.empleados= cargarEmpleados();
+    public GestionCredenciales() throws IOException {
+    this.empleados= cargarCredenciales();
 }
     public ListaEnlazada<Empleado> cargarEmpleados() throws IOException{
         try(Reader reader = new FileReader(archivo)){

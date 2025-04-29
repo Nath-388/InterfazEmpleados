@@ -1,12 +1,12 @@
 package ModuloModelos;
 
-public class Vagon {
+public abstract class Vagon {
     private String id;
-    private double cargaMaxima;
+   
 
-    public Vagon(String id, double cargaMaxima) {
+    public Vagon(String id) {
         this.id = id;
-        this.cargaMaxima = cargaMaxima;
+        
     }
 
     public String getId() {
@@ -17,11 +17,5 @@ public class Vagon {
         this.id = id;
     }
 
-    public double getCargaMaxima() {
-        return cargaMaxima;
-    }
-
-    public void setCargaMaxima(double cargaMaxima) {
-        this.cargaMaxima = cargaMaxima;
-    }
+  
 }

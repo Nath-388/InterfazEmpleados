@@ -4,20 +4,41 @@ public class Pasajero {
     private String nombres;
     private String apellidos;
     private int teléfono;
-    private Equipaje equipaje;
+    private Equipaje[] equipaje;
     private String identificacion;
     private String dirección;
     private String categoria;
+    
 
-    public Pasajero(String nombres, String apellidos, int teléfono, Equipaje equipaje, String identificacion, String dirección, String categoria) {
+    public Pasajero(String nombres, String apellidos, int teléfono, String identificacion, String dirección, String categoria) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.teléfono = teléfono;
-        this.equipaje = equipaje;
+        this.equipaje = new Equipaje[2];
         this.identificacion = identificacion;
         this.dirección = dirección;
         this.categoria = categoria;
     }
+    public boolean agregarEquipaje(Equipaje equipaje){
+        for (int i = 0;  i< this.equipaje.length; i++) {
+            if(this.equipaje[i]==null){
+                this.equipaje[i]=equipaje;
+                return true;
+            }
+        }
+        return false;
+    }
+    public double pesoTotalEquipaje(){
+        double total=0;
+        for (Equipaje e : equipaje) {
+            if(e != null){
+                total += e.getPeso();
+            }
+            
+        }
+        return total;
+    }
+    
 
     public String getNombres() {
         return nombres;
@@ -43,11 +64,11 @@ public class Pasajero {
         this.teléfono = teléfono;
     }
 
-    public Equipaje getEquipaje() {
+    public Equipaje[] getEquipaje() {
         return equipaje;
     }
 
-    public void setEquipaje(Equipaje equipaje) {
+    public void setEquipaje(Equipaje[] equipaje) {
         this.equipaje = equipaje;
     }
 

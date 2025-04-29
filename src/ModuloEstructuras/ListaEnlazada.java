@@ -1,11 +1,19 @@
 package ModuloEstructuras;
 
+import java.util.function.Predicate;
+
+
+
 public class ListaEnlazada<T> {
 
 
     private NodoLista<T> cabeza;
     private int tamaño;
-
+    
+public ListaEnlazada(){
+    cabeza=null;
+    tamaño=0;
+}
 
     public void agregarAlFinal(T dato) {
         NodoLista<T> nuevo = new NodoLista<>(dato);
@@ -13,36 +21,31 @@ public class ListaEnlazada<T> {
             cabeza = nuevo;
         } else {
             NodoLista<T> actual = cabeza;
-            while (actual.siguiente != null) {
-                actual = actual.siguiente;
+            while (actual.getSiguiente() != null) {
+                actual = actual.getSiguiente();
             }
-            actual.siguiente = nuevo;
+            actual.setSiguiente(nuevo);
         }
         tamaño++;
     }
 
-    public void agregarAlInicio(T dato) {
-        NodoLista<T> nuevo = new NodoLista<>(dato);
-        nuevo.siguiente = cabeza;
-        cabeza = nuevo;
-        tamaño++;
-    }
+   
 
     public boolean eliminar(T dato) {
         if (cabeza == null) {
             return false;
         }
-        if (cabeza.dato.equals(dato)) {
-            cabeza = cabeza.siguiente;
+        if (cabeza.getDato().equals(dato)) {
+            cabeza = cabeza.getSiguiente();
             tamaño--;
             return true;
         }
         NodoLista<T> actual = cabeza;
-        while (actual.siguiente != null && !actual.siguiente.dato.equals(dato)) {
-            actual = actual.siguiente;
+        while (actual.getSiguiente() != null && !actual.getSiguiente().getDato().equals(dato)) {
+            actual = actual.getSiguiente();
         }
-        if (actual.siguiente != null) {
-            actual.siguiente = actual.siguiente.siguiente;
+        if (actual.getSiguiente() != null) {
+            actual.setSiguiente(actual.getSiguiente().getSiguiente());
             tamaño--;
             return true;
         }
@@ -51,20 +54,20 @@ public class ListaEnlazada<T> {
 
     public T obtener(int indice) {
         if (indice < 0 || indice >= tamaño){
-            return null;
+           throw new IndexOutOfBoundsException("Índice fuera de rango");
         }
         NodoLista<T> actual = cabeza;
         for (int i = 0; i < indice; i++) {
-            actual = actual.siguiente;
+            actual = actual.getSiguiente();
         }
-        return actual.dato;
+        return actual.getDato();
     }
 
     public boolean contiene(T dato) {
         NodoLista<T> actual = cabeza;
         while (actual != null) {
-            if (actual.dato.equals(dato)) return true;
-            actual = actual.siguiente;
+            if (actual.getDato().equals(dato)) return true;
+            actual = actual.getSiguiente();
         }
         return false;
     }
@@ -80,13 +83,28 @@ public class ListaEnlazada<T> {
     public void imprimir() {
         NodoLista<T> actual = cabeza;
         while (actual != null) {
-            System.out.print(actual.dato + " -> ");
-            actual = actual.siguiente;
+            System.out.print(actual.getDato() + " -> ");
+            actual = actual.getSiguiente();
         }
         System.out.println("null");
     }
     public NodoLista<T> getCabeza() {
         return cabeza;
+    }
+    public ListaEnlazada<T> filtrar(Predicate<T> predicado){
+        ListaEnlazada<T> resultado = new ListaEnlazada<>();
+        NodoLista<T> actual = cabeza;
+        while(actual != null){
+            if(predicado.test(actual.getDato())){
+                resultado.agregarAlFinal(actual.getDato());
+            }
+            actual= actual.getSiguiente();
+        }
+        return resultado;
+    }
+    public void clear(){
+        cabeza=null;
+        tamaño=0;
     }
 
 }

@@ -1,26 +1,44 @@
 package ModuloModelos;
 
+import ModuloEstructuras.ListaEnlazada;
+
 public class Tren {
-    private String nombre;
+    private String tipo;
     private String id;
     private double capacidadCarga;
     private double kilometraje;
-    private Vagon[] vagones;
+    private ListaEnlazada<Vagon> vagones;
 
-    public Tren(String nombre, String id, double capacidadCarga, double kilometraje, Vagon[] vagones) {
-        this.nombre = nombre;
+    public Tren(String tipo, String id,  double kilometraje) {
+        this.tipo = tipo;
         this.id = id;
-        this.capacidadCarga = capacidadCarga;
         this.kilometraje = kilometraje;
-        this.vagones = vagones;
+        this.vagones = new ListaEnlazada<>();
+        if("Merecedes-Benz".equalsIgnoreCase(tipo)){
+            this.capacidadCarga = 28;
+        } else if("Arnold".equalsIgnoreCase(tipo)){
+            this.capacidadCarga=32;
+        }
     }
 
-    public String getNombre() {
-        return nombre;
+    public void agregarVagon(Vagon vagon){
+        if(vagones.tamaño()<capacidadCarga){
+            vagones.agregarAlFinal(vagon);
+        } else{
+            throw new IllegalStateException("No se pueden agregar más vagones. Capacidad ´máxima alcanzada");
+        }
+    }
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+        if("Mercedes-Benz".equalsIgnoreCase(tipo)){
+            this.capacidadCarga=28;
+        } else if("Arnold".equalsIgnoreCase(tipo)){
+            this.capacidadCarga=32;
+        }
     }
 
     public String getId() {
@@ -47,11 +65,8 @@ public class Tren {
         this.kilometraje = kilometraje;
     }
 
-    public Vagon[] getVagones() {
-        return vagones;
-    }
-
-    public void setVagones(Vagon[] vagones) {
-        this.vagones = vagones;
-    }
+ public ListaEnlazada<Vagon> getVagones(){
+     return vagones;
+ }
+    
 }

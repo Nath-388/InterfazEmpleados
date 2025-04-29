@@ -67,13 +67,13 @@ public class ValidarBoletos extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 260, 1400, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 260, 1370, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Buscar");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 172, 139, 59));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 170, 139, 59));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N

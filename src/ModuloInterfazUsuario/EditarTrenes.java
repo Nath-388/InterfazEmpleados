@@ -4,6 +4,8 @@
  */
 package ModuloInterfazUsuario;
 
+import java.awt.event.ActionEvent;
+
 /**
  *
  * @author nath_
@@ -32,14 +34,14 @@ public class EditarTrenes extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        tipo = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,22 +74,25 @@ public class EditarTrenes extends javax.swing.JFrame {
         jLabel3.setText("CAPACIDAD DE CARGA");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 250, -1));
 
-        jLabel5.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel5.setText("KILOMETRAJE");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 280, 260, -1));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 440, 59));
+        tipo.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mercedes-Benz", "Arnold" }));
+        tipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tipoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 440, 59));
 
         jLabel6.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel6.setText("NUMERO DE VAGONES");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 410, 260, -1));
+        jLabel6.setText("KILOMETRAJE");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 270, 260, -1));
 
+        jTextField3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jTextField3.setText("jTextField3");
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 330, 440, 60));
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel8.setText("NOMBRE");
+        jLabel8.setText("Tipo");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 110, -1));
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
@@ -101,11 +106,27 @@ public class EditarTrenes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 710, 160, 59));
 
+        jTextField4.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jTextField4.setText("jTextField3");
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 440, 60));
 
+        jTextField5.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jTextField5.setText("jTextField3");
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 460, 440, 60));
+
+        jLabel7.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jLabel7.setText("NUMERO DE VAGONES");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 410, 260, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,6 +153,18 @@ public class EditarTrenes extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+       
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+       
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tipoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,21 +200,21 @@ public class EditarTrenes extends javax.swing.JFrame {
             }
         });
     }
-
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JComboBox<String> tipo;
     // End of variables declaration//GEN-END:variables
 }

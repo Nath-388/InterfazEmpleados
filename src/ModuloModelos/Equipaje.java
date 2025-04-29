@@ -25,7 +25,10 @@ public class Equipaje {
     }
 
     public void setPeso(double peso) {
-        this.peso = peso;
+        if(peso>80){
+        throw new IllegalArgumentException("El qeuipaje no puede pesar más de 80kg");
+    }
+        this.peso=peso;
     }
 
     public Vagon getVagonAsignado() {

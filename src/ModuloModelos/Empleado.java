@@ -5,16 +5,20 @@ public class Empleado {
     private String apellidos;
     private String cedula;
     private String correo;
-    private int telefono;
-    private String cargo;
+    private String telefono;
+    private String tipo;
+    private String username;
+    private String password;
 
-    public Empleado(String nombres, String apellidos, String cedula, String correo, int telefono, String cargo) {
+    public Empleado(String nombres, String apellidos, String cedula, String correo, String telefono, String tipo) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.cedula = cedula;
         this.correo = correo;
         this.telefono = telefono;
-        this.cargo = cargo;
+        this.tipo = tipo;
+        this.username= generarUsername();
+        this.password= generarPassword();
     }
 
     public String getNombres() {
@@ -49,19 +53,30 @@ public class Empleado {
         this.correo = correo;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
-    public String getCargo() {
-        return cargo;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public void setTipo(String cargo) {
+        this.tipo = cargo;
     }
+    private String generarUsername(){
+        return cedula + "@UrbanLink.com";
+    }
+    private String generarPassword(){
+        return cedula;
+    }
+    public boolean isAdmin(){
+        return "admin".equalsIgnoreCase(tipo);
+    }
+     public String getUsername() { return username; }
+    public String getPassword() { return password; }
 }

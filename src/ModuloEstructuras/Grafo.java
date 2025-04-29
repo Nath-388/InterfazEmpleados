@@ -30,8 +30,8 @@ public class Grafo<T> {
         NodoLista<Arista<T>> actual = v.adyacentes.getCabeza();
 
         while (actual != null) {
-            vecinos.agregarAlFinal(actual.dato.destino.dato);
-            actual = actual.siguiente;
+            vecinos.agregarAlFinal(actual.getDato().destino.dato);
+            actual = actual.getSiguiente();
         }
 
         return vecinos;
@@ -42,18 +42,18 @@ public class Grafo<T> {
         NodoLista<T> nodo = claves.getCabeza();
 
         while (nodo != null) {
-            T clave = nodo.dato;
+            T clave = nodo.getDato();
             Vertice<T> vertice = vertices.obtener(clave);
             System.out.print(clave + " -> ");
 
             NodoLista<Arista<T>> actual = vertice.adyacentes.getCabeza();
             while (actual != null) {
-                System.out.print(actual.dato.destino.dato + "(" + actual.dato.peso + ") ");
-                actual = actual.siguiente;
+                System.out.print(actual.getDato().destino.dato + "(" + actual.getDato().peso + ") ");
+                actual = actual.getSiguiente();
             }
 
             System.out.println();
-            nodo = nodo.siguiente;
+            nodo = nodo.getSiguiente();
         }
     }
 }

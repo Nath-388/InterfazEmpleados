@@ -1,18 +1,37 @@
 package ModuloModelos;
 
-public class VagonEquipaje extends Vagon{
-    private Equipaje[] equipaje;
+import ModuloEstructuras.ListaEnlazada;
 
-    public VagonEquipaje(String id, double cargaMaxim, Equipaje[] equipaje) {
-        super(id,cargaMaxim);
-        this.equipaje = equipaje;
+public class VagonEquipaje extends Vagon{
+    private ListaEnlazada<Equipaje> equipaje;
+    private double capacidadMaxima= 1000;
+
+    public VagonEquipaje(String id) {
+        super(id);
+        this.equipaje = new ListaEnlazada<>();
+    }
+    
+    public boolean agregarEquipaje(Equipaje equipaje){
+        if(pesoActual()+ equipaje.getPeso() <= capacidadMaxima){
+            this.equipaje.agregarAlFinal(equipaje);
+            equipaje.setVagonAsignado(this);
+            return true;
+            
+        }
+        return false;
+    }
+    
+    public double pesoActual(){
+        double total=0;
+        for (int i = 0; i < equipaje.tamaño(); i++) {
+            total+=equipaje.obtener(i).getPeso();
+        }
+        return total;
     }
 
-    public Equipaje[] getEquipaje() {
+    public ListaEnlazada<Equipaje> getEquipaje() {
         return equipaje;
     }
 
-    public void setEquipaje(Equipaje[] equipaje) {
-        this.equipaje = equipaje;
-    }
+   
 }

@@ -4,16 +4,17 @@
  */
 package ModuloInterfazUsuario;
 
+import Controlador.AuthController;
+
 /**
  *
  * @author nath_
  */
 public class Dashboard extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Dashboard
-     */
-    public Dashboard() {
+private AuthController authController;
+    
+    public Dashboard(AuthController authController) {
+        this.authController=authController;
         initComponents();
     }
 
@@ -48,7 +49,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
+        contentPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,6 +65,11 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 250, 210));
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,6 +101,11 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, -1, -1));
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,6 +137,11 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 650, 420, -1));
 
         jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel6MouseClicked(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -157,6 +173,11 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 750, 420, -1));
 
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -187,6 +208,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 850, 420, -1));
 
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
+
         jLabel8.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jLabel8.setText("Cerrar Sesión");
 
@@ -210,6 +237,11 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 990, 210, 70));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -267,19 +299,19 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 1500, 270));
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout contentPanelLayout = new javax.swing.GroupLayout(contentPanel);
+        contentPanel.setLayout(contentPanelLayout);
+        contentPanelLayout.setHorizontalGroup(
+            contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1510, Short.MAX_VALUE)
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        contentPanelLayout.setVerticalGroup(
+            contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 820, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, 1510, 820));
-        jPanel10.getAccessibleContext().setAccessibleName("");
+        jPanel1.add(contentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, 1510, 820));
+        contentPanel.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -299,6 +331,30 @@ public class Dashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        showRutasPanel();
+    }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        showHorariosPanel();
+    }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+        showTrenesPanel();
+    }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
+        showBoletosPanel();
+    }//GEN-LAST:event_jPanel6MouseClicked
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        showUsuariosPanel();
+    }//GEN-LAST:event_jPanel7MouseClicked
+
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+        logout();
+    }//GEN-LAST:event_jPanel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -331,11 +387,49 @@ public class Dashboard extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Dashboard().setVisible(true);
+                
             }
         });
     }
+    private void showRutasPanel(){
+        contentPanel.removeAll();
+        contentPanel.add(new ResumenRutas(authController));
+        contentPanel.revalidate();
+        contentPanel.repaint();
+    }
+    private void showHorariosPanel(){
+        contentPanel.removeAll();
+        contentPanel.add(new ResumenHorarios(authController));
+        contentPanel.revalidate();
+        contentPanel.repaint();
+    }
+     private void showTrenesPanel(){
+        contentPanel.removeAll();
+        contentPanel.add(new ResumenTrenes(authController));
+        contentPanel.revalidate();
+        contentPanel.repaint();
+    }
+      private void showUsuariosPanel(){
+        contentPanel.removeAll();
+        contentPanel.add(new ResumenUsuarios(authController));
+        contentPanel.revalidate();
+        contentPanel.repaint();
+    }
+       private void showBoletosPanel(){
+        contentPanel.removeAll();
+        contentPanel.add(new validarBoletos(authController));
+        contentPanel.revalidate();
+        contentPanel.repaint();
+    }
+      private void logout(){
+          authController.logout();
+          Login login = new Login();
+          login.setVisuble(true);
+          this.dispose();
+      }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel contentPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -350,7 +444,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
