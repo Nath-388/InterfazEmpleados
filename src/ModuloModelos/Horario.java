@@ -6,6 +6,7 @@ public class Horario {
     private String id;
     private LocalDateTime horaSalida;
     private LocalDateTime horallegada;
+    
 
     public Horario(String id, LocalDateTime horaSalida, LocalDateTime horallegada) {
         this.id = id;

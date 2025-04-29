@@ -1,10 +1,12 @@
 package ModuloEstructuras;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.function.Predicate;
 
 
 
-public class ListaEnlazada<T> {
+public class ListaEnlazada<T> implements Iterable<T>{
 
 
     private NodoLista<T> cabeza;
@@ -14,7 +16,34 @@ public ListaEnlazada(){
     cabeza=null;
     tamaño=0;
 }
+ @Override
+    public Iterator<T> iterator() {
+        return new IteradorLista<>(cabeza);
+    }
 
+    // Clase interna para el iterador
+    private static class IteradorLista<T> implements Iterator<T> {
+        private NodoLista<T> actual;
+
+        IteradorLista(NodoLista<T> cabeza) {
+            this.actual = cabeza;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return actual != null;
+        }
+
+        @Override
+        public T next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException("No hay más elementos en la lista");
+            }
+            T dato = actual.getDato();
+            actual = actual.getSiguiente();
+            return dato;
+        }
+    }
     public void agregarAlFinal(T dato) {
         NodoLista<T> nuevo = new NodoLista<>(dato);
         if (cabeza == null) {

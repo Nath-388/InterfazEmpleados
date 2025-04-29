@@ -8,12 +8,12 @@ public class Ruta {
     private Horario horario;
     private ListaEnlazada<Estacion> estacionesVisitadas;
 
-    public Ruta(String id, Tren tren, Horario horario) {
+    public Ruta(String id, Tren tren, Horario horario, ListaEnlazada<Estacion> estacionesVisitadas) {
         
         this.id = id;
         this.tren = tren;
         this.horario = horario;
-        this.estacionesVisitadas = new ListaEnlazada<>();
+        this.estacionesVisitadas = estacionesVisitadas;
     }
     public void agregarEstacion(Estacion estacion){
         estacionesVisitadas.agregarAlFinal(estacion);

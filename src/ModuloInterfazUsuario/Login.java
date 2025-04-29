@@ -4,19 +4,36 @@
  */
 package ModuloInterfazUsuario;
 
-import Controlador.AuthController;
+
 import ModuloModelos.Empleado;
+import ModuloServicios.Autenticacion;
 import javax.swing.JOptionPane;
 
 
 
 public class Login extends javax.swing.JFrame {
 
-  private AuthController authController;
+    /**
+     * @return the usuario
+     */
+    public static Empleado getUsuario() {
+        return usuario;
+    }
+    
+private  Autenticacion autenticacion;
+private static Empleado usuario;
+  
     public Login() {
         initComponents();
-         authController = new AuthController();
+        autenticacion= new Autenticacion();
+        Empleado empleado= new Empleado("Nathalia", "Rojas", "1097496590", "nathalia.rojas@upb.edu.co", "3202115201", "admin");
+        Empleado empleado2 = new Empleado("Luky", "Rojas", "10914562891", "Luky@gmail.com", "3202115201", "noAdmin");
+        autenticacion.agregarEmpleado(empleado);
+        autenticacion.agregarEmpleado(empleado2);
+        usuario= null;
+        
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -146,22 +163,21 @@ public class Login extends javax.swing.JFrame {
          String username = txtUsername.getText();
         String password = new String(txtPassword.getPassword());
         
-        if (authController.login(username, password)) {
-            Empleado empleado = authController.getCurrentUser();
-            Dashboard dashboard = new Dashboard(authController);
+        if (autenticacion.login(username, password)) {
+            usuario= Autenticacion.getUsuarioIngresado();
+            Dashboard dashboard = new Dashboard();
             dashboard.setVisible(true);
             this.dispose();
+            
         } else {
-            JOptionPane.showMessageDialog(this, 
-                "Credenciales incorrectas", 
-                "Error de autenticación", 
-                JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this,
+                    "Credenciales incorrectas",
+                    "Error de autenticación",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnLoginMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -189,8 +205,10 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
             new Login().setVisible(true);
-            new EditarTrenes().setVisible(true);
+            
         });
+        
+        
     }
     
    
