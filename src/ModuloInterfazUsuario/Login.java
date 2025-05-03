@@ -7,6 +7,7 @@ package ModuloInterfazUsuario;
 
 import ModuloModelos.Empleado;
 import ModuloServicios.Autenticacion;
+
 import javax.swing.JOptionPane;
 
 
@@ -55,6 +56,8 @@ private static Empleado usuario;
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -166,6 +169,7 @@ private static Empleado usuario;
         if (autenticacion.login(username, password)) {
             usuario= Autenticacion.getUsuarioIngresado();
             Dashboard dashboard = new Dashboard();
+            dashboard.setExtendedState(MAXIMIZED_BOTH);
             dashboard.setVisible(true);
             this.dispose();
             
@@ -204,6 +208,7 @@ private static Empleado usuario;
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
+            
             new Login().setVisible(true);
             
         });

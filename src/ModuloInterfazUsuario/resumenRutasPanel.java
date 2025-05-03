@@ -10,6 +10,7 @@ import ModuloModelos.Estacion;
 import ModuloModelos.Horario;
 import ModuloModelos.Ruta;
 import ModuloModelos.Tren;
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Dimension;
 
 /**
@@ -55,8 +56,8 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
 
     
     public resumenRutasPanel() {
+        
         initComponents();
-       
         setPreferredSize(new Dimension(1510,820));
         
     }
@@ -81,6 +82,7 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
         lblTitulo = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtBusqueda.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         txtBusqueda.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +90,7 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
                 txtBusquedaActionPerformed(evt);
             }
         });
+        add(txtBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 172, 1226, 59));
 
         btnBorrar.setBackground(new java.awt.Color(0, 0, 0));
         btnBorrar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
@@ -98,6 +101,7 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
                 btnBorrarActionPerformed(evt);
             }
         });
+        add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 698, 139, 59));
 
         tablaRutas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -114,10 +118,13 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
 
         scrollPanelTabla.setViewportView(jScrollPane1);
 
+        add(scrollPanelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 263, 1395, -1));
+
         btnBuscar.setBackground(new java.awt.Color(0, 0, 0));
         btnBuscar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("Buscar");
+        add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 172, 139, 59));
 
         btnNuevo.setBackground(new java.awt.Color(0, 0, 0));
         btnNuevo.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
@@ -133,6 +140,7 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
                 btnNuevoActionPerformed(evt);
             }
         });
+        add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1007, 698, 139, 59));
 
         btnEditar.setBackground(new java.awt.Color(0, 0, 0));
         btnEditar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
@@ -143,52 +151,11 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
                 btnEditarActionPerformed(evt);
             }
         });
+        add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1158, 698, 139, 59));
 
         lblTitulo.setFont(new java.awt.Font("Roboto ExtraBold", 1, 48)); // NOI18N
         lblTitulo.setText("Rutas");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTitulo)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 1226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(scrollPanelTabla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1395, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addComponent(lblTitulo)
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(scrollPanelTabla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41))
-        );
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 78, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBusquedaActionPerformed

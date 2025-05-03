@@ -47,5 +47,16 @@
             <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/Controlador/ListaEnlazadaAdapter.java</file>
             <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/Controlador/AuthController.java</file>
         </group>
+        <group>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Empleado.java</file>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/Autenticacion.java</file>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/Login.java</file>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloEstructuras/ListaEnlazada.java</file>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/CompraBoletos.java</file>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/ControlAbordaje.java</file>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/editHorarioPanel.java</file>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/agregarrutaPanel.java</file>
+            <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/Dashboard.java</file>
+        </group>
     </open-files>
 </project-private>

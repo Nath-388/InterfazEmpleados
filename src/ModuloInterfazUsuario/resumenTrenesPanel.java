@@ -4,6 +4,7 @@
  */
 package ModuloInterfazUsuario;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.Dimension;
 
 /**
@@ -17,7 +18,8 @@ public class resumenTrenesPanel extends javax.swing.JPanel {
      */
     public resumenTrenesPanel() {
         initComponents();
-         setPreferredSize(new Dimension(1510,820));
+        
+        setPreferredSize(new Dimension(1510,820));
     }
 
     /**

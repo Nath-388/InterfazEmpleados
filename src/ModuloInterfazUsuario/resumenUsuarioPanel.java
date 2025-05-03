@@ -7,6 +7,8 @@ package ModuloInterfazUsuario;
 import ModuloEstructuras.ListaEnlazada;
 import ModuloModelos.Empleado;
 import ModuloServicios.Autenticacion;
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
