@@ -35,5 +35,8 @@ public class Autenticacion {
      public static ListaEnlazada<Empleado> getEmpleados(){
          return empleados;
      }
+     public static String getNombreEmpleado(){
+         return usuarioIngresado.getNombres();
+     }
    
 }

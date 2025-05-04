@@ -6,12 +6,18 @@ package ModuloInterfazUsuario;
 
 import ModuloEstructuras.ListaEnlazada;
 import ModuloEstructuras.NodoLista;
+import static ModuloInterfazUsuario.Dashboard.ShowJPanel;
+import ModuloInterfazUsuario.table.TableHeaderAlignment;
+import ModuloInterfazUsuario.table.checkBoxTableHeaderRenderer;
 import ModuloModelos.Estacion;
 import ModuloModelos.Horario;
 import ModuloModelos.Ruta;
 import ModuloModelos.Tren;
+import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.extras.FlatSVGIcon;
 import java.awt.Dimension;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -56,9 +62,38 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
 
     
     public resumenRutasPanel() {
-        
+       
         initComponents();
         setPreferredSize(new Dimension(1510,820));
+        init();
+        
+    }
+    public void init(){
+        txtBusqueda.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Ingrese el nombre de la ruta");
+        txtBusqueda.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("Imagenes/search.svg"));
+        table.getColumnModel().getColumn(0).setHeaderRenderer(new checkBoxTableHeaderRenderer(table, 0));
+        table.getTableHeader().setDefaultRenderer(new TableHeaderAlignment(table));
+       
+        testData();
+       
+    }
+     private void testData(){
+        DefaultTableModel model = (DefaultTableModel)table.getModel();
+
+         model.addRow(new Object[] {false, 1, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 2, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 3, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 4, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 5, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 6, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 7, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 8,"Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 9, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 10, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 11, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 12, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 13, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
+        model.addRow(new Object[] {false, 14, "Nathalia Sofia", "Tren 1", "Estacion A, Estacion B, Estacion C", "10:30", "12:40"});
         
     }
 
@@ -73,9 +108,8 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
 
         txtBusqueda = new javax.swing.JTextField();
         btnBorrar = new javax.swing.JButton();
-        scrollPanelTabla = new javax.swing.JScrollPane();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tablaRutas = new javax.swing.JTable();
+        table = new javax.swing.JTable();
         btnBuscar = new javax.swing.JButton();
         btnNuevo = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -103,22 +137,32 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
         });
         add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 698, 139, 59));
 
-        tablaRutas.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "ID", "NOMBRE", "TREN", "ESTACIONES", "HORARIO"
+                "SELECT", "ID", "NOMBRE", "TREN", "ESTACIONES", "HORA SALIDA", "HORA LLEGADA"
             }
-        ));
-        jScrollPane1.setViewportView(tablaRutas);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                true, false, false, false, false, false, false
+            };
 
-        scrollPanelTabla.setViewportView(jScrollPane1);
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
-        add(scrollPanelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 263, 1395, -1));
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(table);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 250, 1400, -1));
 
         btnBuscar.setBackground(new java.awt.Color(0, 0, 0));
         btnBuscar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
@@ -146,9 +190,9 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
         btnEditar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
         btnEditar.setText("Editar");
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
+        btnEditar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEditarMouseClicked(evt);
             }
         });
         add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1158, 698, 139, 59));
@@ -170,13 +214,14 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNuevoActionPerformed
 
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-    Dashboard.ShowJPanel(new agregarrutaPanel());    }//GEN-LAST:event_btnEditarActionPerformed
-
     private void btnNuevoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoMouseClicked
       
-        Dashboard.ShowJPanel(new agregarrutaPanel());
+        ShowJPanel(new agregarrutaPanel());
     }//GEN-LAST:event_btnNuevoMouseClicked
+
+    private void btnEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseClicked
+        ShowJPanel(new agregarrutaPanel());
+    }//GEN-LAST:event_btnEditarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -186,8 +231,7 @@ public void editarTrenes(String id, Horario horario, Tren tren, ListaEnlazada<Es
     private javax.swing.JButton btnNuevo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblTitulo;
-    private javax.swing.JScrollPane scrollPanelTabla;
-    private javax.swing.JTable tablaRutas;
+    private javax.swing.JTable table;
     private javax.swing.JTextField txtBusqueda;
     // End of variables declaration//GEN-END:variables
 }

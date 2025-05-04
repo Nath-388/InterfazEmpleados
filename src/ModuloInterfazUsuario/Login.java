@@ -8,7 +8,12 @@ package ModuloInterfazUsuario;
 import ModuloModelos.Empleado;
 import ModuloServicios.Autenticacion;
 
+import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.fonts.roboto.FlatRobotoFont;
+import java.awt.Font;
+
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 
 
@@ -27,8 +32,8 @@ private static Empleado usuario;
     public Login() {
         initComponents();
         autenticacion= new Autenticacion();
-        Empleado empleado= new Empleado("Nathalia", "Rojas", "1097496590", "nathalia.rojas@upb.edu.co", "3202115201", "admin");
-        Empleado empleado2 = new Empleado("Luky", "Rojas", "10914562891", "Luky@gmail.com", "3202115201", "noAdmin");
+        Empleado empleado= new Empleado("Nathalia", "Rojas", "1097496590", "admin");
+        Empleado empleado2 = new Empleado("Luky", "Rojas", "10914562891", "noAdmin");
         autenticacion.agregarEmpleado(empleado);
         autenticacion.agregarEmpleado(empleado2);
         usuario= null;
@@ -183,28 +188,9 @@ private static Empleado usuario;
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+       FlatRobotoFont.install();
+       UIManager.put("defaultFont", new Font(FlatRobotoFont.FAMILY, Font.PLAIN, 13));
+       FlatLightLaf.setup();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {

@@ -4,18 +4,14 @@ public class Empleado {
     private String nombres;
     private String apellidos;
     private String cedula;
-    private String correo;
-    private String telefono;
     private String tipo;
     private String username;
     private String password;
 
-    public Empleado(String nombres, String apellidos, String cedula, String correo, String telefono, String tipo) {
+    public Empleado(String nombres, String apellidos, String cedula, String tipo) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.cedula = cedula;
-        this.correo = correo;
-        this.telefono = telefono;
         this.tipo = tipo;
         this.username= generarUsername();
         this.password= generarPassword();
@@ -45,21 +41,7 @@ public class Empleado {
         this.cedula = cedula;
     }
 
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
+   
 
     public String getTipo() {
         return tipo;

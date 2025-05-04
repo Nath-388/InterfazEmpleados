@@ -34,38 +34,39 @@ public class agregarTrenPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         tipo = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setFont(new java.awt.Font("Roboto ExtraBold", 1, 48)); // NOI18N
         jLabel10.setText("Editar Tren");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 78, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("CANCELAR");
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 698, 160, 59));
 
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel1.setText("ID");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 285, 40, -1));
 
+        jTextField2.setEditable(false);
         jTextField2.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
-
-        jLabel3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel3.setText("CAPACIDAD DE CARGA");
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 330, 430, 59));
 
         tipo.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mercedes-Benz", "Arnold" }));
@@ -74,15 +75,19 @@ public class agregarTrenPanel extends javax.swing.JPanel {
                 tipoActionPerformed(evt);
             }
         });
+        add(tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 460, 430, 59));
 
         jLabel6.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel6.setText("KILOMETRAJE");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 285, 260, -1));
 
         jTextField3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jTextField3.setText("jTextField3");
+        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 330, 430, 59));
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel8.setText("Tipo");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 420, 110, -1));
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
@@ -93,14 +98,7 @@ public class agregarTrenPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-
-        jTextField4.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jTextField4.setText("jTextField3");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 698, 160, 59));
 
         jTextField5.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jTextField5.setText("jTextField3");
@@ -109,94 +107,11 @@ public class agregarTrenPanel extends javax.swing.JPanel {
                 jTextField5ActionPerformed(evt);
             }
         });
+        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 460, 430, 59));
 
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel7.setText("NUMERO DE VAGONES");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1389, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel10)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(130, 130, 130)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(460, 460, 460)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addComponent(tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(130, 130, 130)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(320, 320, 320)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(1049, 1049, 1049)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 669, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel10)
-                    .addGap(63, 63, 63)
-                    .addComponent(jLabel1)
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel6)))
-                    .addGap(11, 11, 11)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(jLabel8))
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(10, 10, 10)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel7)))
-                    .addGap(1, 1, 1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jLabel3))
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(10, 10, 10)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(120, 120, 120)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel7.setText("VAGONES");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 420, 260, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -211,10 +126,6 @@ public class agregarTrenPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
 
     }//GEN-LAST:event_jTextField5ActionPerformed
@@ -225,13 +136,11 @@ public class agregarTrenPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JComboBox<String> tipo;
     // End of variables declaration//GEN-END:variables

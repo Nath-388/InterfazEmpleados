@@ -5,12 +5,15 @@
 package ModuloInterfazUsuario;
 
 import ModuloEstructuras.ListaEnlazada;
+import static ModuloInterfazUsuario.Dashboard.ShowJPanel;
+import ModuloInterfazUsuario.table.TableHeaderAlignment;
+import ModuloInterfazUsuario.table.checkBoxTableHeaderRenderer;
 import ModuloModelos.Empleado;
 import ModuloServicios.Autenticacion;
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatLightLaf;
-import java.awt.BorderLayout;
+import com.formdev.flatlaf.FlatClientProperties;
+import com.formdev.flatlaf.extras.FlatSVGIcon;
 import java.awt.Dimension;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -24,6 +27,51 @@ public class resumenUsuarioPanel extends javax.swing.JPanel {
         initComponents();
          setPreferredSize(new Dimension(1510,820));
          empleados= Autenticacion.getEmpleados();
+         init();
+    }
+     public void init(){
+         txtSearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Ingrese la cédula del empleado");
+        txtSearch.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("Imagenes/search.svg"));
+        table.getColumnModel().getColumn(0).setHeaderRenderer(new checkBoxTableHeaderRenderer(table, 0));
+        table.getTableHeader().setDefaultRenderer(new TableHeaderAlignment(table));
+       
+        testData();
+       
+    }
+     private void testData(){
+        DefaultTableModel model = (DefaultTableModel)table.getModel();
+
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        model.addRow(new Object[] {false, "1097496590", "Nathalia Sofia", "Rojas Pimienta", "Admin", "1097496590@UrbanLink.com", "1097496590"});
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -31,43 +79,63 @@ public class resumenUsuarioPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel10 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtSearch = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table = new javax.swing.JTable();
         btnNuevo = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(1459, 761));
+        setPreferredSize(new java.awt.Dimension(1459, 761));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setFont(new java.awt.Font("Roboto ExtraBold", 1, 48)); // NOI18N
         jLabel10.setText("Usuarios");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 78, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtSearch.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        txtSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtSearchActionPerformed(evt);
             }
         });
+        add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 172, 1226, 59));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Buscar");
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 172, 139, 59));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
-                "CÉDULA", "NOMBRES", "APELLIDOS", "CORREO", "TELÉFONO", "CARGO"
+                "SELECT", "CÉDULA", "NOMBRES", "APELLIDOS", "TIPO", "USERNAME", "PASSWORD"
             }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(table);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 250, 1400, -1));
 
         btnNuevo.setBackground(new java.awt.Color(0, 0, 0));
         btnNuevo.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
@@ -83,16 +151,23 @@ public class resumenUsuarioPanel extends javax.swing.JPanel {
                 btnNuevoActionPerformed(evt);
             }
         });
+        add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1007, 698, 139, 59));
 
         btnEditar.setBackground(new java.awt.Color(0, 0, 0));
         btnEditar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
         btnEditar.setText("Editar");
+        btnEditar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEditarMouseClicked(evt);
+            }
+        });
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
             }
         });
+        add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1158, 698, 139, 59));
 
         btnBorrar.setBackground(new java.awt.Color(0, 0, 0));
         btnBorrar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
@@ -103,59 +178,12 @@ public class resumenUsuarioPanel extends javax.swing.JPanel {
                 btnBorrarActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1400, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(1, 1, 1)
-                            .addComponent(jLabel10))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(1, 1, 1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 1226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(30, 30, 30)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(955, 955, 955)
-                            .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(12, 12, 12)
-                            .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(12, 12, 12)
-                            .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel10)
-                    .addGap(37, 37, 37)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(29, 29, 29)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(33, 33, 33)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 698, 139, 59));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtSearchActionPerformed
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         // TODO add your handling code here:
@@ -170,8 +198,12 @@ public class resumenUsuarioPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnNuevoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoMouseClicked
-        // TODO add your handling code here:
+        ShowJPanel(new agregarUsuarioPanel());
     }//GEN-LAST:event_btnNuevoMouseClicked
+
+    private void btnEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseClicked
+        ShowJPanel(new agregarUsuarioPanel());
+    }//GEN-LAST:event_btnEditarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -181,7 +213,7 @@ public class resumenUsuarioPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTable table;
+    private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
 }

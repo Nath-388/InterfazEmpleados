@@ -42,19 +42,25 @@ public class agregarUsuarioPanel extends javax.swing.JPanel {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setFont(new java.awt.Font("Roboto ExtraBold", 1, 48)); // NOI18N
         jLabel10.setText("Editar Usuarios");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 78, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("CANCELAR");
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 698, 160, 59));
 
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel1.setText("CÉDULA");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 155, 220, -1));
 
         jTextField2.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -62,20 +68,26 @@ public class agregarUsuarioPanel extends javax.swing.JPanel {
                 jTextField2ActionPerformed(evt);
             }
         });
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 195, 430, 59));
 
         jLabel3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel3.setText("CORREO");
+        jLabel3.setText("APELLIDOS");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 420, 101, -1));
 
         jLabel5.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel5.setText("TELÉFONO");
+        jLabel5.setText("USERNAME");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 155, 251, -1));
 
         jLabel6.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel6.setText("CARGO");
+        jLabel6.setText("PASSWORD");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 285, 251, -1));
 
         jTextField3.setText("jTextField3");
+        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 460, 430, 59));
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel8.setText("NOMBRE");
+        jLabel8.setText("NOMBRES");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 285, 101, -1));
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
@@ -86,6 +98,7 @@ public class agregarUsuarioPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 698, 160, 59));
 
         jTextField4.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -93,83 +106,20 @@ public class agregarUsuarioPanel extends javax.swing.JPanel {
                 jTextField4ActionPerformed(evt);
             }
         });
+        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 195, 430, 59));
 
         jTextField5.setText("jTextField3");
+        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 330, 430, 59));
 
         jTextField6.setText("jTextField3");
+        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 330, 430, 59));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1339, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel10)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(130, 130, 130)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(130, 130, 130)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(570, 570, 570)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(459, 459, 459)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(999, 999, 999)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 679, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel10)
-                    .addGap(43, 43, 43)
-                    .addComponent(jLabel1)
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(50, 50, 50)
-                            .addComponent(jLabel5)))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel8)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel6)
-                    .addGap(8, 8, 8)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel3))
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(140, 140, 140)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel7.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jLabel7.setText("TIPO");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 420, 251, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 460, 430, 59));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -188,11 +138,13 @@ public class agregarUsuarioPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

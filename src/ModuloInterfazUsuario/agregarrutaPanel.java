@@ -28,7 +28,7 @@ public class agregarrutaPanel extends javax.swing.JPanel {
     }
     
     public void agregar(){
-        id= txtID.getText();
+        id= txtFecha.getText();
         String tipoTren= opcionTren.getActionCommand();
         
     }
@@ -38,10 +38,11 @@ public class agregarrutaPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        datePicker = new com.raven.datechooser.DateChooser();
         jLabel10 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        txtID = new javax.swing.JTextField();
+        txtFecha = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         estacionSalida = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
@@ -50,187 +51,141 @@ public class agregarrutaPanel extends javax.swing.JPanel {
         estacionLlegada = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         transbordo = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        opcionHorario = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        txtID1 = new javax.swing.JTextField();
+        opcionTren1 = new javax.swing.JComboBox<>();
+        estacionSalida1 = new javax.swing.JComboBox<>();
+
+        datePicker.setForeground(new java.awt.Color(0, 0, 0));
+        datePicker.setTextRefernce(txtFecha);
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setFont(new java.awt.Font("Roboto ExtraBold", 1, 48)); // NOI18N
         jLabel10.setText("Editar Ruta");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 78, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("CANCELAR");
+        btnCancelar.setBackground(new java.awt.Color(0, 0, 0));
+        btnCancelar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setText("CANCELAR");
+        add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 698, 160, 59));
 
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel1.setText("ID");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 155, 31, -1));
 
-        txtID.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        txtID.addActionListener(new java.awt.event.ActionListener() {
+        txtFecha.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        txtFecha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIDActionPerformed(evt);
+                txtFechaActionPerformed(evt);
             }
         });
+        add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 460, 430, 59));
 
         jLabel3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel3.setText("TREN");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 285, 101, -1));
 
         estacionSalida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(estacionSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 590, 430, 59));
 
         jLabel5.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel5.setText("ESTACIÓN DE SALIDA");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 155, 251, -1));
 
         opcionTren.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(opcionTren, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 590, 430, 59));
 
         jLabel6.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel6.setText("ESTACIÓN DE LLEGADA");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 285, 251, -1));
 
         estacionLlegada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(estacionLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 195, 430, 59));
 
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel9.setText("TRASBORDO");
+        jLabel9.setText("ESTACIONES");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 420, 251, -1));
 
         transbordo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(transbordo, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 460, 430, 59));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ei_plus.png"))); // NOI18N
-
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("GUARDAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnGuardar.setBackground(new java.awt.Color(0, 0, 0));
+        btnGuardar.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setText("GUARDAR");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnGuardarActionPerformed(evt);
             }
         });
+        add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1309, 698, 160, 59));
 
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel7.setText("HORARIO");
+        jLabel7.setText("FECHA DE SALIDA");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 420, 215, -1));
 
-        opcionHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel8.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jLabel8.setText("HORA DE SALIDA");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 540, 215, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(opcionTren, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(opcionHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(976, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel10)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(542, 542, 542)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(143, 143, 143)
-                            .addComponent(estacionSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(573, 573, 573)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(573, 573, 573)
-                            .addComponent(estacionLlegada, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(570, 570, 570)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(570, 570, 570)
-                            .addComponent(transbordo, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(1069, 1069, 1069)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(211, 211, 211)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(opcionTren, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(opcionHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(216, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel10)
-                    .addGap(43, 43, 43)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(13, 13, 13)
-                            .addComponent(jLabel5)))
-                    .addGap(5, 5, 5)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(estacionSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(29, 29, 29)
-                    .addComponent(jLabel6)
-                    .addGap(14, 14, 14)
-                    .addComponent(estacionLlegada, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(37, 37, 37)
-                    .addComponent(jLabel9)
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(transbordo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel2)))
-                    .addGap(161, 161, 161)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel11.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jLabel11.setText("HORA DE LLEGADA");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 540, 215, -1));
+
+        txtID1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        txtID1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtID1ActionPerformed(evt);
+            }
+        });
+        add(txtID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 195, 430, 59));
+
+        opcionTren1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(opcionTren1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 330, 430, 59));
+
+        estacionSalida1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(estacionSalida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 330, 430, 59));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
+    private void txtFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtIDActionPerformed
+    }//GEN-LAST:event_txtFechaActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void txtID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtID1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtID1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnGuardar;
+    private com.raven.datechooser.DateChooser datePicker;
     private javax.swing.JComboBox<String> estacionLlegada;
     private javax.swing.JComboBox<String> estacionSalida;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> estacionSalida1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JComboBox<String> opcionHorario;
     private javax.swing.JComboBox<String> opcionTren;
+    private javax.swing.JComboBox<String> opcionTren1;
     private javax.swing.JComboBox<String> transbordo;
-    private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtFecha;
+    private javax.swing.JTextField txtID1;
     // End of variables declaration//GEN-END:variables
 }

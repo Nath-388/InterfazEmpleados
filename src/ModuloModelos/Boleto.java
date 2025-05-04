@@ -1,20 +1,21 @@
 package ModuloModelos;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Boleto {
     private String id;
-    private LocalDateTime fechaCompra;
-    private LocalDateTime fechaSalida;
-    private LocalDateTime fechaLlegada;
+    private Date fechaCompra;
+    private Date fechaSalida;
     private Pasajero pasajero;
+    private Asiento asiento;
+    private Ruta ruta;
     private Tren tren;
     private double precio;
 
-    public Boleto(LocalDateTime fechaCompra, String id, LocalDateTime fechaSalida, LocalDateTime fechaLlegada, Pasajero pasajero, Tren tren, double precio) {
+    public Boleto(Date fechaCompra, String id, Date fechaSalida, LocalDateTime fechaLlegada, Pasajero pasajero, Tren tren, double precio) {
         this.fechaCompra = fechaCompra;
         this.id = id;
         this.fechaSalida = fechaSalida;
-        this.fechaLlegada = fechaLlegada;
         this.pasajero = pasajero;
         this.tren = tren;
         this.precio = precio;
@@ -27,19 +28,19 @@ public class Boleto {
         this.id = id;
     }
 
-    public LocalDateTime getFechaCompra() {
+    public Date getFechaCompra() {
         return fechaCompra;
     }
 
-    public void setFechaCompra(LocalDateTime fechaCompra) {
+    public void setFechaCompra(Date fechaCompra) {
         this.fechaCompra = fechaCompra;
     }
 
-    public LocalDateTime getFechaSalida() {
+    public Date getFechaSalida() {
         return fechaSalida;
     }
 
-    public void setFechaSalida(LocalDateTime fechaSalida) {
+    public void setFechaSalida(Date fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
 
@@ -49,14 +50,6 @@ public class Boleto {
 
     public void setPasajero(Pasajero pasajero) {
         this.pasajero = pasajero;
-    }
-
-    public LocalDateTime getFechaLlegada() {
-        return fechaLlegada;
-    }
-
-    public void setFechaLlegada(LocalDateTime fechaLlegada) {
-        this.fechaLlegada = fechaLlegada;
     }
 
     public Tren getTren() {

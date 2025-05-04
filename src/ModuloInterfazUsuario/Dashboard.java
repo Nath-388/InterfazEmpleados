@@ -5,6 +5,7 @@
 package ModuloInterfazUsuario;
 
 import ModuloModelos.Empleado;
+import ModuloServicios.Autenticacion;
 import com.formdev.flatlaf.FlatDarkLaf;
 
 import java.awt.BorderLayout;
@@ -21,6 +22,8 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         
         initComponents();
+        bienvenida.setText("Bienvenid@ " + Autenticacion.getNombreEmpleado());
+        
         staticContentPanel = contentPanel;
         
     }
@@ -32,9 +35,6 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        gestionHorarios = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         gestionTrenes = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -50,12 +50,11 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        bienvenida = new javax.swing.JLabel();
         contentPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -65,24 +64,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mingcute--user-4-fill (1).png"))); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 250, 210));
-
-        gestionHorarios.setBackground(new java.awt.Color(0, 0, 0));
-        gestionHorarios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                gestionHorariosMouseClicked(evt);
-            }
-        });
-        gestionHorarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Roboto ExtraBold", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Gestión Horarios");
-        gestionHorarios.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 36, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bx--calendar (1).png"))); // NOI18N
-        gestionHorarios.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 36, -1, -1));
-
-        jPanel2.add(gestionHorarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 420, 90));
 
         gestionTrenes.setBackground(new java.awt.Color(0, 0, 0));
         gestionTrenes.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -100,7 +81,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/material-symbols--train-outline (1).png"))); // NOI18N
         gestionTrenes.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 27, -1, -1));
 
-        jPanel2.add(gestionTrenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 650, 420, 80));
+        jPanel2.add(gestionTrenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 420, 80));
 
         validarBoletos.setBackground(new java.awt.Color(0, 0, 0));
         validarBoletos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -118,7 +99,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/material-symbols-light--transit-ticket-outline.png"))); // NOI18N
         validarBoletos.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 35, -1, -1));
 
-        jPanel2.add(validarBoletos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 750, 420, 90));
+        jPanel2.add(validarBoletos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, 420, 90));
 
         gestionUsuarios.setBackground(new java.awt.Color(0, 0, 0));
         gestionUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -136,7 +117,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gg--user.png"))); // NOI18N
         gestionUsuarios.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 43, -1, -1));
 
-        jPanel2.add(gestionUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 850, 420, 100));
+        jPanel2.add(gestionUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 780, 420, 100));
 
         jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -182,15 +163,15 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/game-icons--trail.png"))); // NOI18N
         gestionRutas.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 36, -1, -1));
 
-        jPanel2.add(gestionRutas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 420, 90));
+        jPanel2.add(gestionRutas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 420, 90));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 420, 1090));
 
         jPanel9.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel10.setFont(new java.awt.Font("Roboto ExtraBold", 1, 48)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Bienvenid@ {usuario}");
+        bienvenida.setFont(new java.awt.Font("Roboto ExtraBold", 1, 48)); // NOI18N
+        bienvenida.setForeground(new java.awt.Color(255, 255, 255));
+        bienvenida.setText("Bienvenid@ {usuario}");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -198,14 +179,14 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(507, Short.MAX_VALUE)
-                .addComponent(jLabel10)
+                .addComponent(bienvenida)
                 .addGap(499, 499, 499))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(109, Short.MAX_VALUE)
-                .addComponent(jLabel10)
+                .addComponent(bienvenida)
                 .addGap(104, 104, 104))
         );
 
@@ -232,10 +213,6 @@ public class Dashboard extends javax.swing.JFrame {
         staticContentPanel.revalidate();
         staticContentPanel.repaint();
     }
-    private void gestionHorariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gestionHorariosMouseClicked
-       ShowJPanel(new resumenHorariosPanel());
-    }//GEN-LAST:event_gestionHorariosMouseClicked
-
     private void gestionTrenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gestionTrenesMouseClicked
       ShowJPanel(new resumenTrenesPanel());
 
@@ -316,24 +293,21 @@ public class Dashboard extends javax.swing.JFrame {
       
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bienvenida;
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JPanel gestionHorarios;
     private javax.swing.JPanel gestionRutas;
     private javax.swing.JPanel gestionTrenes;
     private javax.swing.JPanel gestionUsuarios;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;

@@ -2,51 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="Sistema-de-gestion-de-trenes-de-pasajeros">
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/Login.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/Dashboard.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/ResumenRutas.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Ruta.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/ResumenTrenes.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Tren.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/ResumenHorarios.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Horario.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/ValidarBoletos.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Boleto.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/ResumenUsuarios.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Empleado.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/EditRuta.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/EditarHorario.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/EditarTrenes.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/EditarUsuarios.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/Autenticacion.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloPersistencia/PersistenciaUsuarios.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloPersistencia/GestorJSON.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloPersistencia/PersistenciaTrenes.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloEstructuras/ListaEnlazada.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloEstructuras/NodoLista.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/VagonEquipaje.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/VagonPasajeros.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Equipaje.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Usuario.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Pasajero.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/ControlAbordaje.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/GestionEmpleados.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/GestionEquipaje.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/GestionPasajeros.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/GestionRutas.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/GestionTrenes.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Vagon.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Estacion.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloEstructuras/TablaHash.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloEstructuras/Pila.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/Controlador/DataManager.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloUtillidades/GeneradorIDs.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/CompraBoletos.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/GestionCredenciales.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/Controlador/ListaEnlazadaAdapter.java</file>
-            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/Controlador/AuthController.java</file>
-        </group>
         <group>
             <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Empleado.java</file>
             <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/Autenticacion.java</file>
@@ -66,6 +21,24 @@
             <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/DateTimeFilter.java</file>
             <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/validarBoleto.java</file>
             <file>file:/C:/Users/bohor/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/agregarHorarioPanel.java</file>
+        </group>
+        <group name="Sistema-de-gestion-de-trenes-de-pasajeros">
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/Dashboard.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/Login.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/resumenUsuarioPanel.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/resumenRutasPanel.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/resumenTrenesPanel.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/validarBoleto.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloServicios/Autenticacion.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/agregarHorarioPanel.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/editRutaPanel.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/agregarTrenPanel.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/agregarUsuarioPanel.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloInterfazUsuario/agregarrutaPanel.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Asiento.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Boleto.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Empleado.java</file>
+            <file>file:/C:/Users/nath_/OneDrive/Documentos/GitHub/InterfazEmpleados/src/ModuloModelos/Equipaje.java</file>
         </group>
     </open-files>
 </project-private>
