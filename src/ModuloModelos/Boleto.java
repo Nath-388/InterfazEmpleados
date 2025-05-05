@@ -1,74 +1,108 @@
 package ModuloModelos;
-import java.time.LocalDateTime;
+
 import java.util.Date;
 
 public class Boleto {
-    private String id;
+
+   
     private Date fechaCompra;
-    private Date fechaSalida;
-    private Pasajero pasajero;
+    private String id;
     private Asiento asiento;
+    private Pasajero pasajero;
     private Ruta ruta;
-    private Tren tren;
     private double precio;
 
-    public Boleto(Date fechaCompra, String id, Date fechaSalida, LocalDateTime fechaLlegada, Pasajero pasajero, Tren tren, double precio) {
-        this.fechaCompra = fechaCompra;
+    public Boleto(String id,Date fechaCompra, Pasajero pasajero,Asiento asiento, Ruta ruta, double precio) {
+       this.fechaCompra= fechaCompra;
         this.id = id;
-        this.fechaSalida = fechaSalida;
         this.pasajero = pasajero;
-        this.tren = tren;
         this.precio = precio;
+        this.asiento= asiento;
+        this.ruta=ruta;
+       
     }
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
+   /**
+     * @return the fechaCompra
+     */
     public Date getFechaCompra() {
         return fechaCompra;
     }
 
+    /**
+     * @param fechaCompra the fechaCompra to set
+     */
     public void setFechaCompra(Date fechaCompra) {
         this.fechaCompra = fechaCompra;
     }
 
-    public Date getFechaSalida() {
-        return fechaSalida;
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
     }
 
-    public void setFechaSalida(Date fechaSalida) {
-        this.fechaSalida = fechaSalida;
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
     }
 
+    /**
+     * @return the asiento
+     */
+    public Asiento getAsiento() {
+        return asiento;
+    }
+
+    /**
+     * @param asiento the asiento to set
+     */
+    public void setAsiento(Asiento asiento) {
+        this.asiento = asiento;
+    }
+
+    /**
+     * @return the pasajero
+     */
     public Pasajero getPasajero() {
         return pasajero;
     }
 
+    /**
+     * @param pasajero the pasajero to set
+     */
     public void setPasajero(Pasajero pasajero) {
         this.pasajero = pasajero;
     }
 
-    public Tren getTren() {
-        return tren;
+    /**
+     * @return the ruta
+     */
+    public Ruta getRuta() {
+        return ruta;
     }
 
-    public void setTren(Tren tren) {
-        this.tren = tren;
+    /**
+     * @param ruta the ruta to set
+     */
+    public void setRuta(Ruta ruta) {
+        this.ruta = ruta;
     }
 
+    /**
+     * @return the precio
+     */
     public double getPrecio() {
         return precio;
     }
 
+    /**
+     * @param precio the precio to set
+     */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
-
-    ;
 
 }

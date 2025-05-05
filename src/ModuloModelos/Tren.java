@@ -13,7 +13,7 @@ public class Tren {
         this.tipo = tipo;
         this.id = id;
         this.kilometraje = kilometraje;
-        this.vagones = new ListaEnlazada<>();
+        this.vagones = new ListaEnlazada<Vagon>();
         if("Merecedes-Benz".equalsIgnoreCase(tipo)){
             this.capacidadCarga = 28;
         } else if("Arnold".equalsIgnoreCase(tipo)){

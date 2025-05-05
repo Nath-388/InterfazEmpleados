@@ -8,7 +8,7 @@ public class VagonEquipaje extends Vagon{
 
     public VagonEquipaje(String id) {
         super(id);
-        this.equipaje = new ListaEnlazada<>();
+        this.equipaje = new ListaEnlazada<Equipaje>();
     }
     
     public boolean agregarEquipaje(Equipaje equipaje){
